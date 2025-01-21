@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker Tool</title>
+  <link rel="stylesheet" href="color-picker.css">
+</head>
+<body>
+  <div class="color-picker-container">
+    <h2>Pick a Color</h2>
+    <input type="color" id="colorPicker">
+    <p class="color-code">Hex Code: <span id="colorCode">#ffffff</span></p>
+  </div>
+
+  <script>
+    const colorPicker = document.getElementById('colorPicker');
+    const colorCode = document.getElementById('colorCode');
+
+    // Update the hex code when the color is selected
+    colorPicker.addEventListener('input', () => {
+      colorCode.textContent = colorPicker.value;
+    });
+  </script>
+</body>
+</html>
